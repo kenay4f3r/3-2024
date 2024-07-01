@@ -1,0 +1,67 @@
+.color-box {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.image-box {
+    background-image: url('ruta/a/tu/imagen-montaña.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inner-image-box {
+    background-image: url('mar-argentino-playajpg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 150px; 
+    width: 80%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.border-box {
+    border-top: 5px solid red;
+    border-right: 5px dotted green;
+    border-bottom: 5px double blue;
+    border-left: 5px dashed orange;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 60%; 
+    margin-top: 10px;
+    position: relative;
+}
+
+.rounded-box {
+    border: 2px solid black;
+    border-radius: 15px;
+    color: black;
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+}
