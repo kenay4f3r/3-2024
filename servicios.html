@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metaetiquetas para definir la codificación de caracteres y hacer la página adaptable a dispositivos móviles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título de la página que aparece en la pestaña del navegador -->
   <title>Contacto | Agencia de Autos</title>
-  <link rel="stylesheet" href="tp final.css">
+  
+  <!-- Enlace al archivo CSS para los estilos externos -->
+  <link rel="stylesheet" href="tp10.css">
 </head>
 <body>
+  <!-- Encabezado con barra de navegación -->
   <header>
     <nav>
       <ul>
-        <li><a href="Agencia de Autos.html">Inicio</a></li>
+        <!-- Enlaces de navegación -->
+        <li><a href="tp10.html">Inicio</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
+
+  <!-- Contenido principal de la página -->
   <main>
+    <!-- Sección de formulario de contacto -->
     <section id="contacto">
       <h1>Formulario de Contacto</h1>
+      <!-- Formulario para ingresar datos -->
       <form>
+        <!-- Campo para ingresar el nombre -->
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre">
+        
+        <!-- Campo para ingresar el correo electrónico -->
         <label for="email">Correo electrónico:</label>
         <input type="email" id="email" name="email">
+        
+        <!-- Campo para ingresar el mensaje -->
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje"></textarea>
-        <button>Enviar</button>
+        
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar</button>
       </form>
     </section>
+    
+    <!-- Sección con información de contacto -->
     <section id="info-contacto">
       <h2>Información de Contacto</h2>
+      <!-- Detalles de la agencia -->
       <p>Dirección: Calle 123, Col. ABC</p>
       <p>Teléfono: 555-555-5555</p>
-      <p>Correo electrónico: [info@agenciadeautos.com](mailto:info@agenciadeautos.com)</p>
+      <p>Correo electrónico: <a href="mailto:info@agenciadeautos.com">info@agenciadeautos.com</a></p>
     </section>
   </main>
+
+  <!-- Pie de página con derechos de autor y redes sociales -->
   <footer>
-    <p>&copy; 2023 Agencia de Autos</p>
+    <p>&copy; 2005 Agencia de Autos</p>
     <ul>
+      <!-- Enlaces a redes sociales -->
       <li><a href="#">Facebook</a></li>
       <li><a href="#">Twitter</a></li>
       <li><a href="#">Instagram</a></li>
