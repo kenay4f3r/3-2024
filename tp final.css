@@ -1,196 +1,229 @@
+/* Estilos generales del body */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+  font-family: Arial, sans-serif; /* Fuente general para todo el texto */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  background-color: #f7f7f7; /* Color de fondo de la página */
+}
+
+/* Estilos del encabezado (header) */
+header {
+  background-color: #333; /* Color de fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 1em; /* Espaciado interior del encabezado */
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  display: flex; /* Usa Flexbox para organizar los elementos en fila */
+  justify-content: space-between; /* Espaciado entre los elementos de la lista */
+}
+
+/* Estilos de cada ítem de la lista de navegación */
+nav li {
+  margin-right: 20px; /* Espaciado entre los ítems */
+}
+
+/* Estilos de los enlaces en la navegación */
+nav a {
+  color: #fff; /* Color blanco para los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Estilos del contenedor principal (main) */
+main {
+  display: flex; /* Usamos Flexbox para organizar el contenido */
+  flex-direction: column; /* Disposición en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 2em; /* Espaciado interno */
+}
+
+/* Estilos comunes para todas las secciones */
+section {
+  background-color: #fff; /* Fondo blanco */
+  padding: 1em; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde suave de color gris */
+  margin-bottom: 20px; /* Espaciado debajo de cada sección */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos de los títulos (h1, h2, h3) */
+h1, h2, h3 {
+  font-weight: bold; /* Negrita */
+  margin-top: 0; /* Elimina margen superior */
+}
+
+h1 {
+  font-size: 36px; /* Tamaño de fuente más grande para h1 */
+}
+
+h2 {
+  font-size: 24px; /* Tamaño de fuente mediano para h2 */
+}
+
+h3 {
+  font-size: 18px; /* Tamaño de fuente más pequeño para h3 */
+}
+
+/* Estilo de los párrafos */
+p {
+  margin-bottom: 20px; /* Espaciado debajo de los párrafos */
+}
+
+/* Estilo para las imágenes */
+img {
+  width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
+  height: 150px; /* Establece una altura fija */
+  object-fit: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para los artículos dentro de modelos de autos */
+article {
+  margin-bottom: 20px; /* Espaciado debajo de cada artículo */
+}
+
+/* Estilos específicos para la sección principal (#principal) */
+#principal {
+  background-image: url('img/fondo.jpg'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre toda el área disponible */
+  background-position: center; /* Centra la imagen */
+  height: 100vh; /* Altura de la pantalla completa */
+  display: flex; /* Flexbox para alinear el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  color: #fff; /* Color del texto blanco */
+}
+
+/* Estilos de la sección de modelos (#modelos) */
+#modelos {
+  display: flex; /* Flexbox para organizar los modelos en fila */
+  flex-wrap: wrap; /* Permite que los modelos se acomoden en varias filas si es necesario */
+  justify-content: center; /* Centra los modelos en la pantalla */
+}
+
+/* Estilos para cada modelo dentro de la sección de modelos */
+.modelo {
+  margin: 20px; /* Espaciado alrededor de cada modelo */
+  width: calc(33.33% - 20px); /* Tres modelos por fila con un espacio de 20px entre ellos */
+}
+
+/* Estilos de la sección de servicios (#servicios) */
+#servicios {
+  display: flex; /* Flexbox para disposición en columna */
+  flex-direction: column;
+  align-items: center; /* Centra los elementos */
+}
+
+/* Estilos de la sección de noticias (#noticias) */
+#noticias {
+  display: flex; /* Flexbox en columna */
+  flex-direction: column;
+  align-items: center; /* Centra los elementos */
+}
+
+/* Estilos de la sección de contacto (#contacto) */
+#contacto {
+  display: flex; /* Flexbox en columna */
+  flex-direction: column;
+  align-items: center; /* Centra los elementos */
+}
+
+/* Estilos para el formulario */
+form {
+  width: 50%; /* El formulario ocupará el 50% del ancho */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos de las etiquetas de los campos del formulario */
+label {
+  display: block; /* Hace que las etiquetas se muestren en bloque */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos de los campos de entrada y textarea */
+input, textarea {
+  width: 100%; /* Los campos ocuparán el 100% del ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espaciado debajo de cada campo */
+  border: 1px solid #ccc; /* Borde suave de color gris */
+}
+
+/* Estilos del botón de envío del formulario */
+button {
+  background-color: #333; /* Fondo oscuro para el botón */
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano */
+}
+
+/* Estilo para el estado hover del botón (cuando el ratón pasa por encima) */
+button:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos del pie de página (footer) */
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 1em; /* Espaciado interior */
+  text-align: center; /* Centra el texto */
+  clear: both; /* Limpia los flotantes */
+}
+
+/* Estilos de la lista en el pie de página */
+footer ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina el padding */
+}
+
+/* Estilos de los ítems de la lista en el pie de página */
+footer li {
+  display: inline-block; /* Los ítems estarán en fila */
+  margin-right: 20px; /* Espaciado entre ítems */
+}
+
+/* Estilos de los enlaces en el pie de página */
+footer a {
+  color: #fff; /* Texto blanco para los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Diseño responsive: cuando el ancho de la pantalla es menor a 768px */
+@media (max-width: 768px) {
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
+    padding: 1em; /* Menos padding en pantallas pequeñas */
   }
-  
   section {
-    background-color: #fff;
-    padding: 1em;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5em; /* Menos padding en las secciones */
   }
-  
-  h1, h2, h3 {
-    font-weight: bold;
-    margin-top: 0;
+}
+
+/* Diseño responsive: cuando el ancho de la pantalla es menor a 480px */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* Los elementos del menú se apilan verticalmente */
   }
-  
-  h1 {
-    font-size: 36px;
+  nav li {
+    margin-right: 0; /* Elimina el margen derecho */
   }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  h3 {
-    font-size: 18px;
-  }
-  
-  p {
-    margin-bottom: 20px;
-  }
-  
-  img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  article {
-    margin-bottom: 20px;
-  }
-  
   #principal {
-    background-image: url('img/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    height: 50vh; /* Reduce la altura de la sección principal */
   }
-  
   #modelos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Los modelos se apilan verticalmente */
   }
-  
   .modelo {
-    margin: 20px;
-    width: calc(33.33% - 20px);
+    margin: 10px; /* Menos margen alrededor de los modelos */
+    width: 100%; /* Los modelos ocupan el 100% del ancho */
   }
-  
-  #noticias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  form {
-    width: 50%;
-    margin-top: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    clear: both;
-  }
-  
-  footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  footer li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Responsive design */
-  
-  @media (max-width: 768px) {
-    main {
-      padding: 1em;
-    }
-    section {
-      padding: 0.5em;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    nav ul {
-      flex-direction: column;
-    }
-    nav li {
-      margin-right: 0;
-    }
-    #principal {
-      height: 50vh;
-    }
-    #modelos {
-      flex-direction: column;
-    }
-    .modelo {
-      margin: 10px;
-      width: 100%;
-    }
-  }
+}
+
   
