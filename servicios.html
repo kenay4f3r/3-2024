@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Metaetiquetas para definir la codificación de caracteres y hacer la página adaptable a dispositivos móviles -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Título de la página que aparece en la pestaña del navegador -->
-  <title>Contacto | Agencia de Autos</title>
-  
-  <!-- Enlace al archivo CSS para los estilos externos -->
-  <link rel="stylesheet" href="tp10.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto para la Agencia de Autos. Contáctanos para más información sobre nuestros vehículos.">
+    <meta name="author" content="Agencia de Autos">
+    <title>Contacto - Agencia de Autos</title>
+    <link rel="stylesheet" href="tp final.css">
 </head>
 <body>
-  <!-- Encabezado con barra de navegación -->
-  <header>
-    <nav>
-      <ul>
-        <!-- Enlaces de navegación -->
-        <li><a href="tp10.html">Inicio</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de la Agencia de Autos" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Agencia de Autos.html" aria-label="Ir a la página de inicio">Inicio</a></li>
+                <li><a href="autos.html" aria-label="Ver nuestra selección de autos">Autos</a></li>
+                <li><a href="servicios.html" aria-label="Ir a la página de contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Contenido principal de la página -->
-  <main>
-    <!-- Sección de formulario de contacto -->
-    <section id="contacto">
-      <h1>Formulario de Contacto</h1>
-      <!-- Formulario para ingresar datos -->
-      <form>
-        <!-- Campo para ingresar el nombre -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        
-        <!-- Campo para ingresar el correo electrónico -->
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email">
-        
-        <!-- Campo para ingresar el mensaje -->
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
-        
-        <!-- Botón para enviar el formulario -->
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-    
-    <!-- Sección con información de contacto -->
-    <section id="info-contacto">
-      <h2>Información de Contacto</h2>
-      <!-- Detalles de la agencia -->
-      <p>Dirección: Calle 123, Col. ABC</p>
-      <p>Teléfono: 555-555-5555</p>
-      <p>Correo electrónico: <a href="mailto:info@agenciadeautos.com">info@agenciadeautos.com</a></p>
-    </section>
-  </main>
+    <main>
+        <!-- Formulario de contacto -->
+        <section class="formulario">
+            <div class="container">
+                <h1>Contáctanos</h1>
+                <p>¿Tienes alguna pregunta o inquietud? ¡Escríbenos y te responderemos lo antes posible!</p>
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-  <!-- Pie de página con derechos de autor y redes sociales -->
-  <footer>
-    <p>&copy; 2005 Agencia de Autos</p>
-    <ul>
-      <!-- Enlaces a redes sociales -->
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Instagram</a></li>
-    </ul>
-  </footer>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. +34 123 456 789">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Mapa de ubicación -->
+        <section class="ubicacion">
+            <div class="container">
+                <h2>Visítanos</h2>
+                <p>Estamos ubicados en el centro de la ciudad, cerca de la estación de trenes.</p>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agencia de Autos. Todos los derechos reservados.</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com" target="_blank" aria-label="Ir a Instagram">Instagram</a></li>
+                <li><a href="https://www.facebook.com" target="_blank" aria-label="Ir a Facebook">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank" aria-label="Ir a Twitter">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+    </footer>
+
 </body>
 </html>
