@@ -1,229 +1,241 @@
-/* Estilos generales del body */
+/* Reseteo de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuentes globales */
 body {
-  font-family: Arial, sans-serif; /* Fuente general para todo el texto */
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina el padding por defecto */
-  background-color: #f7f7f7; /* Color de fondo de la página */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Estilos del encabezado (header) */
+/* Contenedor común para centrar el contenido */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para el encabezado */
 header {
-  background-color: #333; /* Color de fondo oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 1em; /* Espaciado interior del encabezado */
-  text-align: center; /* Centra el texto */
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Estilos del menú de navegación */
+header .logo img {
+  max-width: 150px;
+}
+
 nav ul {
-  list-style: none; /* Elimina los puntos de la lista */
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina el padding por defecto */
-  display: flex; /* Usa Flexbox para organizar los elementos en fila */
-  justify-content: space-between; /* Espaciado entre los elementos de la lista */
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-/* Estilos de cada ítem de la lista de navegación */
-nav li {
-  margin-right: 20px; /* Espaciado entre los ítems */
+nav ul li {
+  display: inline-block;
 }
 
-/* Estilos de los enlaces en la navegación */
-nav a {
-  color: #fff; /* Color blanco para los enlaces */
-  text-decoration: none; /* Elimina el subrayado */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Estilos del contenedor principal (main) */
-main {
-  display: flex; /* Usamos Flexbox para organizar el contenido */
-  flex-direction: column; /* Disposición en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  padding: 2em; /* Espaciado interno */
+nav ul li a:hover {
+  color: #ff9800;
 }
 
-/* Estilos comunes para todas las secciones */
-section {
-  background-color: #fff; /* Fondo blanco */
-  padding: 1em; /* Espaciado interno */
-  border: 1px solid #ddd; /* Borde suave de color gris */
-  margin-bottom: 20px; /* Espaciado debajo de cada sección */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+/* Estilos para la sección de bienvenida */
+.bienvenida {
+  background-color: #008cba;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
 }
 
-/* Estilos de los títulos (h1, h2, h3) */
-h1, h2, h3 {
-  font-weight: bold; /* Negrita */
-  margin-top: 0; /* Elimina margen superior */
+.bienvenida h1 {
+  font-size: 2.5rem;
 }
 
-h1 {
-  font-size: 36px; /* Tamaño de fuente más grande para h1 */
+.bienvenida p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
-h2 {
-  font-size: 24px; /* Tamaño de fuente mediano para h2 */
+/* Estilos para la sección de autos destacados */
+.autos-destacados {
+  padding: 4rem 0;
+  background-color: white;
+  text-align: center;
 }
 
-h3 {
-  font-size: 18px; /* Tamaño de fuente más pequeño para h3 */
+.grid-autos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-/* Estilo de los párrafos */
-p {
-  margin-bottom: 20px; /* Espaciado debajo de los párrafos */
+.auto {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para las imágenes */
-img {
-  width: 100%; /* Las imágenes ocuparán el 100% del ancho disponible */
-  height: 150px; /* Establece una altura fija */
-  object-fit: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
-  border-radius: 10px; /* Bordes redondeados */
+.auto-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Estilo para los artículos dentro de modelos de autos */
-article {
-  margin-bottom: 20px; /* Espaciado debajo de cada artículo */
+.auto h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 1rem;
 }
 
-/* Estilos específicos para la sección principal (#principal) */
-#principal {
-  background-image: url('img/fondo.jpg'); /* Imagen de fondo */
-  background-size: cover; /* La imagen cubre toda el área disponible */
-  background-position: center; /* Centra la imagen */
-  height: 100vh; /* Altura de la pantalla completa */
-  display: flex; /* Flexbox para alinear el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  color: #fff; /* Color del texto blanco */
+.precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #008cba;
 }
 
-/* Estilos de la sección de modelos (#modelos) */
-#modelos {
-  display: flex; /* Flexbox para organizar los modelos en fila */
-  flex-wrap: wrap; /* Permite que los modelos se acomoden en varias filas si es necesario */
-  justify-content: center; /* Centra los modelos en la pantalla */
+/* Sección de Video */
+.videos {
+  padding: 4rem 0;
+  background-color: #f5f5f5;
 }
 
-/* Estilos para cada modelo dentro de la sección de modelos */
-.modelo {
-  margin: 20px; /* Espaciado alrededor de cada modelo */
-  width: calc(33.33% - 20px); /* Tres modelos por fila con un espacio de 20px entre ellos */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Estilos de la sección de servicios (#servicios) */
-#servicios {
-  display: flex; /* Flexbox para disposición en columna */
-  flex-direction: column;
-  align-items: center; /* Centra los elementos */
+video {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Estilos de la sección de noticias (#noticias) */
-#noticias {
-  display: flex; /* Flexbox en columna */
-  flex-direction: column;
-  align-items: center; /* Centra los elementos */
+/* Estilos para las promociones */
+.promociones {
+  padding: 4rem 0;
+  background-color: white;
+  text-align: center;
 }
 
-/* Estilos de la sección de contacto (#contacto) */
-#contacto {
-  display: flex; /* Flexbox en columna */
-  flex-direction: column;
-  align-items: center; /* Centra los elementos */
+.promocion {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el formulario */
-form {
-  width: 50%; /* El formulario ocupará el 50% del ancho */
-  margin-top: 20px; /* Espaciado superior */
+.promocion h3 {
+  color: #ff9800;
+  font-size: 1.8rem;
 }
 
-/* Estilos de las etiquetas de los campos del formulario */
-label {
-  display: block; /* Hace que las etiquetas se muestren en bloque */
-  margin-bottom: 10px; /* Espaciado inferior */
+.promocion p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-/* Estilos de los campos de entrada y textarea */
-input, textarea {
-  width: 100%; /* Los campos ocuparán el 100% del ancho disponible */
-  padding: 10px; /* Espaciado interno */
-  margin-bottom: 20px; /* Espaciado debajo de cada campo */
-  border: 1px solid #ccc; /* Borde suave de color gris */
-}
-
-/* Estilos del botón de envío del formulario */
-button {
-  background-color: #333; /* Fondo oscuro para el botón */
-  color: #fff; /* Texto blanco */
-  padding: 10px 20px; /* Espaciado interno */
-  border: none; /* Elimina el borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cursor en forma de mano */
-}
-
-/* Estilo para el estado hover del botón (cuando el ratón pasa por encima) */
-button:hover {
-  background-color: #555; /* Cambia el color de fondo al pasar el ratón */
-}
-
-/* Estilos del pie de página (footer) */
+/* Estilos del pie de página */
 footer {
-  background-color: #333; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-  padding: 1em; /* Espaciado interior */
-  text-align: center; /* Centra el texto */
-  clear: both; /* Limpia los flotantes */
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-/* Estilos de la lista en el pie de página */
-footer ul {
-  list-style: none; /* Elimina los puntos de la lista */
-  margin: 0; /* Elimina márgenes */
-  padding: 0; /* Elimina el padding */
+footer p {
+  margin-bottom: 1rem;
 }
 
-/* Estilos de los ítems de la lista en el pie de página */
-footer li {
-  display: inline-block; /* Los ítems estarán en fila */
-  margin-right: 20px; /* Espaciado entre ítems */
+footer .social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-/* Estilos de los enlaces en el pie de página */
-footer a {
-  color: #fff; /* Texto blanco para los enlaces */
-  text-decoration: none; /* Elimina el subrayado */
+footer .social li {
+  display: inline-block;
 }
 
-/* Diseño responsive: cuando el ancho de la pantalla es menor a 768px */
-@media (max-width: 768px) {
-  main {
-    padding: 1em; /* Menos padding en pantallas pequeñas */
-  }
-  section {
-    padding: 0.5em; /* Menos padding en las secciones */
-  }
+footer .social li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
-/* Diseño responsive: cuando el ancho de la pantalla es menor a 480px */
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: column; /* Los elementos del menú se apilan verticalmente */
-  }
-  nav li {
-    margin-right: 0; /* Elimina el margen derecho */
-  }
-  #principal {
-    height: 50vh; /* Reduce la altura de la sección principal */
-  }
-  #modelos {
-    flex-direction: column; /* Los modelos se apilan verticalmente */
-  }
-  .modelo {
-    margin: 10px; /* Menos margen alrededor de los modelos */
-    width: 100%; /* Los modelos ocupan el 100% del ancho */
-  }
+footer .social li a:hover {
+  color: #ff9800;
+}
+
+/* Estilos del formulario de contacto */
+.formulario {
+  padding: 4rem 0;
+  background-color: white;
+  text-align: center;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #008cba;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005f73;
+}
+
+/* Estilos para el mapa */
+.mapa iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
 }
 
   
